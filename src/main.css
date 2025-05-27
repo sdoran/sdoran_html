@@ -1,0 +1,351 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --main-color: rgba(22,21,19,0.80);
+    --heading-color: #161513;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-syne: 'Syne', sans-serif;;
+	--main-gradient: linear-gradient(270deg, #FF9D42 0%, #FF6069 50.91%, #B16CEA 100%);
+}
+
+@layer components{
+
+    ul{
+        @apply list-none;
+    }
+    ul,li{
+        @apply p-0 m-0;
+    }
+    a{
+        @apply no-underline;
+    }
+    html{
+        @apply overflow-x-hidden p-0 m-0;
+    }
+    body{
+        @apply w-full font-roboto text-[16px] leading-[24px] tracking-[0px] font-normal break-words bg-white text-main-color overflow-x-hidden;
+    }
+    svg{
+        @apply fill-current w-[15px] h-[15px];
+    }
+    img.svg{
+        @apply w-[15px] h-[15px];
+    }
+    h1,h2,h3,h4,h5,h6{
+        @apply font-bold leading-[1.3] font-syne text-heading-color lining-nums proportional-nums;
+    }
+    h1{
+        @apply text-[45px];
+    }
+    h2{
+        @apply text-[36px];
+    }
+    h3{
+        @apply text-[30px];
+    }
+    h4{
+        @apply text-[24px];
+    }
+    h5{
+        @apply text-[20px];
+    }
+    h6{
+        @apply text-[16px];
+    }
+
+    /****** Responsive  ******/
+
+    /*Large Screens*/
+
+    body{
+        @apply large:text-[16px] large:leading-[30px]
+    }
+    .container{
+        @apply large:max-w-[1140px]
+    }
+    .jara_tm_button_border a{
+        @apply large:!py-[9px] large:!px-[24px]
+    }
+    .jara_tm_header .menu ul li{
+        @apply large:mr-[60px]
+    }
+    .jara_tm_header .menu ul li a{
+        @apply large:py-[20px] large:px-0
+    }
+    .jara_tm_hero .title h2{
+        @apply large:text-[90px] large:leading-[85px]
+    }
+    .jara_tm_hero .title h3{
+        @apply large:text-[60px] large:leading-[65px]
+    }
+    .jara_tm_hero .subtitle p{
+        @apply large:text-[24px] large:leading-[24px]
+    }
+    .jara_tm_button a{
+        @apply large:py-[10px] large:px-[32px]
+    }
+    .ara_tm_button_border a{
+        @apply large:py-[9px] large:px-[32px]
+    }
+    .jara_tm_hero .subtitle{
+        @apply large:mb-[30px]
+    }
+    .jara_tm_hero .content{
+        @apply large:pt-[100px]
+    }
+    .jara_tm_hero .right .in > img{
+        @apply large:max-h-[400px] large:max-w-[300px]
+    }
+    .jara_tm_hero .right .in{
+        @apply large:float-left
+    }
+    .jara_tm_all_wrap.ready .jara_tm_hero .right{
+        @apply large:pl-[60px]
+    }
+    .jara_tm_hero .play{
+        @apply large:w-[80px] large:h-[80px]
+    }
+    .jara_tm_hero .play .svg{
+        @apply large:h-[14px] large:w-[14px]
+    }
+    .tm_partners{
+        @apply large:mt-[50px]
+    }
+    .tm_partners .text p{
+        @apply large:text-[16px] large:leading-[20px]
+    }
+    .jara_tm_about .text p{
+        @apply large:text-[40px] large:leading-[50px]
+    }
+    .jara_tm_about .counter ul li{
+        @apply large:mb-[30px]
+    }
+    .jara_tm_about .counter h3{
+        @apply large:text-[40px] large:leading-[45px]
+    }
+    .jara_tm_title h3{
+        @apply large:text-[55px] large:leading-[62px]
+    }
+    .jara_tm_services .list .title h3{
+        @apply large:text-[18px]
+    }
+    .ara_tm_services .list .list_inner{
+        @apply large:pb-[50px]
+    }
+    .jara_tm_testimonials .text p{
+        @apply large:text-[30px] large:leading-[37px]
+    }
+    .jara_tm_testimonials .text{
+        @apply large:mb-[35px]
+    }
+
+    /*Middle Screens*/
+
+    .jara_tm_header{
+        @apply middle:hidden
+    }
+    .jara_tm_mobile_menu{
+        @apply middle:block
+    }
+    .mouse-cursor{
+        @apply middle:hidden
+    }
+    .jara_tm_hero .content{
+        @apply middle:flex-col-reverse middle:pt-[90px]
+    }
+    .jara_tm_hero .left{
+        @apply middle:w-full
+    }
+    .jara_tm_hero .hello span{
+        @apply middle:text-[18px] middle:pl-[45px]
+    }
+    .ara_tm_hero .hello .svg{
+        @apply middle:w-[35px] middle:h-[35px]
+    }
+    .jara_tm_hero .title h2{
+        @apply middle:text-[50px] middle:leading-[55px]
+    }
+    .jara_tm_hero .title h3{
+        @apply middle:text-[35px] middle:leading-[40px]
+    }
+    .jara_tm_hero .subtitle p{
+        @apply middle:text-[21px] middle:leading-[30px]
+    }
+    .ara_tm_all_wrap.ready .jara_tm_hero .right{
+        @apply middle:pl-0
+    }
+    .tm_partners{
+        @apply middle:mt-[50px]
+    }
+    .tm_partners .text{
+        @apply middle:hidden
+    }
+    .tm_partners .list{
+        @apply middle:w-full
+    }
+    .tm_partners .list:after{
+        @apply middle:w-[50px]
+    }
+    .tm_partners .list:before{
+        @apply middle:w-[50px]
+    }
+    .jara_tm_hero .right{
+        @apply middle:w-full middle:mb-[60px]
+    }
+    .jara_tm_hero .right .in{
+        @apply middle:float-left
+    }
+    .jara_tm_hero .right .in > img{
+        @apply middle:max-w-[350px] middle:max-h-[350px]
+    }
+    .jara_tm_hero .play{
+        @apply middle:hidden
+    }
+    .jara_tm_about .about_inner{
+        @apply middle:flex-col middle:items-baseline
+    }
+    .jara_tm_about .experience{
+        @apply middle:w-full middle:mb-[40px]
+    }
+    .jara_tm_about .inside h3{
+        @apply middle:rotate-0 middle:text-[80px] middle:leading-[100px] middle:ml-0
+    }
+    .jara_tm_about .inside h6{
+        @apply middle:rotate-0
+    }
+    .jara_tm_about .text{
+        @apply middle:p-0 middle:w-full middle:mb-[40px]
+    }
+    .jara_tm_about .text p{
+        @apply middle:text-[25px] middle:leading-[33px]
+    }
+    .jara_tm_about .counter{
+        @apply middle:pl-0 middle:w-full
+    }
+    .jara_tm_about .counter ul li{
+        @apply middle:w-auto middle:inline-block middle:mr-[20px] middle:mb-[20px]
+    }
+    .jara_tm_title h3{
+        @apply middle:text-[40px] middle:leading-[47px]
+    }
+    .jara_tm_services .list > ul > li{
+        @apply middle:w-1/2
+    }
+    .jara_tm_portfolio .portfolio_list ul{
+        @apply middle:ml-[-50px]
+    }
+    .jara_tm_portfolio .portfolio_list ul li{
+        @apply middle:pl-[50px]
+    }
+    .jara_tm_process .imagebox{
+        @apply middle:hidden
+    }
+    .jara_tm_process .list{
+        @apply middle:!pr-0
+    }
+    .jara_tm_process .list ul li{
+        @apply middle:w-1/2
+    }
+    .jara_tm_testimonials .testimonials_inner{
+        @apply middle:flex-col middle:items-baseline
+    }
+    .jara_tm_testimonials .left{
+        @apply middle:w-full middle:mb-[40px]
+    }
+    .jara_tm_testimonials .right{
+        @apply middle:w-full middle:pl-0
+    }
+    .jara_tm_testimonials .text p{
+        @apply middle:text-[25px] middle:leading-[32px]
+    }
+    .jara_tm_pricing .list ul li{
+        @apply middle:w-1/2
+    }
+    .jara_tm_footer .project{
+        @apply middle:flex-col middle:items-baseline middle:py-[50px] middle:px-[40px]
+    }
+    .jara_tm_footer .project .left{
+        @apply middle:w-full middle:pr-0 middle:mb-[15px]
+    }
+    .jara_tm_footer .project .right{
+        @apply middle:w-full middle:pl-0
+    }
+    .jara_tm_footer .project .left h3{
+        @apply middle:text-[30px] middle:leading-[36px]
+    }
+    .jara_tm_footer .copyright{
+        @apply middle:flex-col
+    }
+    .jara_tm_footer .copyright .logo{
+        @apply middle:px-0 middle:py-[10px]
+    }
+    .jara_tm_portfolio_page .jara_tm_portfolio{
+        @apply middle:mt-[155px]
+    }
+    .jara_tm_blog_page .jara_tm_news{
+        @apply middle:mt-[155px]
+    }
+
+    /*Small Screens*/
+
+    .jara_tm_flex_title{
+        @apply small:flex-col small:!items-baseline
+    }
+    .jara_tm_flex_title .jara_tm_title{
+        @apply small:mb-[20px]
+    }
+    .jara_tm_services .list > ul{
+        @apply small:ml-0
+    }
+    .jara_tm_services .list > ul > li{
+        @apply small:w-full small:pl-0
+    }
+    .jara_tm_portfolio .portfolio_list ul{
+        @apply small:m-0
+    }
+    .jara_tm_portfolio .portfolio_list ul li{
+        @apply small:!w-full small:!pl-0 small:mb-[40px]
+    }
+    .jara_tm_portfolio .portfolio_list ul li:nth-child(2){
+        @apply small:!mt-0
+    }
+    .jara_tm_portfolio .portfolio_list ul li:nth-child(2) .image{
+        @apply small:!max-w-full
+    }
+    .jara_tm_process .list ul{
+        @apply small:m-0
+    }
+    .jara_tm_process .list ul li{
+        @apply small:w-full small:pl-0
+    }
+    .jara_tm_pricing .list ul{
+        @apply small:m-0
+    }
+    .jara_tm_pricing .list ul li{
+        @apply small:w-full small:pl-0
+    }
+    .jara_tm_news .list ul{
+        @apply small:m-0
+    }
+    .jara_tm_news .list ul li{
+        @apply small:w-full small:pl-0
+    }
+    .jara_tm_news .list ul li .title{
+        @apply small:leading-[1]
+    }
+    .jara_tm_news .list ul li .title a{
+        @apply small:text-[23px] small:leading-[23px]
+    }
+    .jara_tm_about{
+        @apply small:pb-[115px]
+    }
+    .jara_tm_testimonials{
+        @apply small:pb-[130px]
+    }
+    .small-logo {
+        max-width: 30px; /* Adjust width as needed */
+        max-height: 30px; /* Adjust height as needed */
+    }
+}

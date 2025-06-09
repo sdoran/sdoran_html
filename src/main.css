@@ -135,10 +135,10 @@
         @apply large:pb-[50px]
     }
     .jara_tm_testimonials .text p{
-        @apply large:text-[30px] large:leading-[37px]
+        @apply large:text-[14px] large:leading-[16px]
     }
     .jara_tm_testimonials .text{
-        @apply large:mb-[35px]
+        @apply large:mb-[16px]
     }
 
     /*Middle Screens*/
@@ -258,7 +258,8 @@
         @apply middle:w-full middle:pl-0
     }
     .jara_tm_testimonials .text p{
-        @apply middle:text-[25px] middle:leading-[32px]
+        @apply middle:text-[14px] middle:leading-[16px]
+        line-height: 1.5;
     }
     .jara_tm_pricing .list ul li{
         @apply middle:w-1/2
@@ -342,7 +343,7 @@
         @apply small:pb-[115px]
     }
     .jara_tm_testimonials{
-        @apply small:pb-[130px]
+        @apply small:pb-[50px]
     }
     .small-logo {
         max-width: 30px; /* Adjust width as needed */

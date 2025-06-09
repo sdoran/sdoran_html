@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Update GTM
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-        'event': 'testimonial_selected'
+        'event': 'testimonial_selected',
+        'testimonial_index': index,
         });
     }
 

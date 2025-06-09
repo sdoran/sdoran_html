@@ -4,15 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
 
     function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.opacity = i === index ? "1" : "0";
-    });
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? "1" : "0";
+        });
 
-    dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-    });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+        });
 
-    currentIndex = index;
+        currentIndex = index;
+
+        // Update GTM
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+        'event': 'testimonial_selected'
+        });
     }
 
     // Attach click handlers to each dot
